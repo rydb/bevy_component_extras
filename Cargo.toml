@@ -12,7 +12,3 @@ bevy = { version = "*"}
 bevy_mod_raycast = "0.13.1"
 glam = "0.24.0"
 egui = "0.22.0"
-
-[lib]
-crate-type=["dylib"]
-#crate-type=["staticlib", "lib"]

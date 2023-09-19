@@ -1,0 +1,13 @@
+[package]
+name = "component_extras"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { version = "*", features = ["dynamic_linking"]}
+bevy_mod_raycast = "0.13.1"
+glam = "0.24.0"
+egui = "0.22.0"
+[lib]
+crate-type=["dylib"]
+#crate-type=["staticlib", "lib"]

@@ -84,3 +84,7 @@ pub enum SelectionMode {
     Selecting,
     Clicking,
 }
+
+/// marks the entity as something for debug.
+#[derive(Component)]
+pub struct Debug;

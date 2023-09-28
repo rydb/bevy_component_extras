@@ -4,18 +4,21 @@ use bevy_mod_raycast::RaycastMesh;
 use glam::*;
 
 /// marks entity to be looked at by entities marked with `Viewer`
-#[derive(Component)]
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
 pub struct Watched;
 
 /// marks entity to listen to camera related system(following things, looking at things, etc..)
-#[derive(Component)]
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
 pub struct Viewer {
     /// how far away a viewer should stay away from another entity, assuming there is an object to follow
     pub offset: Vec3,
 }
 
 /// marks entity to be followed by viewers
-#[derive(Component)]
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
 pub struct Followed;
 
 
@@ -34,7 +37,8 @@ pub struct Selectable;
 #[uuid = "9e31f3e9-34e2-4e47-b113-606a4b91af58"]
 pub struct Selected;
 
-#[derive(Component)]
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
 pub struct Widget;
 
 /// bundle that contains everything(!!!EXCEPT MESH!!!) that something needs to be selectable
@@ -53,7 +57,8 @@ impl Default for MakeSelectableBundle {
     }
 }
 /// marks entity as "held", meaning its position should following mouse + raycast source point.
-#[derive(Component)]
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
 pub struct Held;
 
 /// A component which stores the last mouse interaction that happened to an entity. Something that wants mouse functionality should use/over-write this.
@@ -86,5 +91,6 @@ pub enum SelectionMode {
 }
 
 /// marks the entity as something for debug.
-#[derive(Component)]
+#[derive(Component, Reflect, Default)]
+#[reflect(Component)]
 pub struct Debug;

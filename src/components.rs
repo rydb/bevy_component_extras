@@ -1,6 +1,6 @@
 use bevy::prelude::{Component, Bundle, Reflect, ReflectComponent};
 use bevy::reflect::TypeUuid;
-use bevy_mod_raycast::RaycastMesh;
+use bevy_mod_raycast::deferred::RaycastMesh;
 use glam::*;
 
 /// marks entity to be looked at by entities marked with `Viewer`
